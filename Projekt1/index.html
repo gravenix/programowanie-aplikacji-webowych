@@ -6,10 +6,14 @@
     <script src="./main.js" ></script>
 </head>
 <body>
-    <input type="number" class="input-number" onchange="recalculate()" /><br />
-    <input type="number" class="input-number" onchange="recalculate()" /><br />
-    <input type="number" class="input-number" onchange="recalculate()" /><br />
-    <input type="number" class="input-number" onchange="recalculate()" /><br />
+    Number of inputs <input id="input-count" type="number" step="1" min="1" onchange="updateInputs()" /><br/>
+    <hr/>
+    <div id="inputs">
+        <input type="number" class="input-number" onchange="recalculate()" /><br />
+        <input type="number" class="input-number" onchange="recalculate()" /><br />
+        <input type="number" class="input-number" onchange="recalculate()" /><br />
+        <input type="number" class="input-number" onchange="recalculate()" /><br />
+    </div>
     <hr />
     <h3>Stats:</h3>
     <div id="results"></div>
