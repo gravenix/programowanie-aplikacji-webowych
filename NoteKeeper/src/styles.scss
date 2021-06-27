@@ -1,0 +1,55 @@
+body {
+    background-color: #ddd;
+    margin: 0;
+}
+
+div.header {
+    margin: 8px;
+}
+
+div.content {
+    background-color: #fff;
+    width: 100%;
+    min-height: 80vh;
+    div.note {
+        display: inline-block;
+        width: 20%;
+        position: relative;
+        margin: 5px;
+        padding: 20px 5px;
+        border: 1px solid #ddd;
+        box-shadow: #111 2px 1px 4px;
+        border-radius: 20px;
+        input, textarea {
+            width: calc(100% - 10px);
+        }
+        textarea {
+            min-height: 200px;
+            resize: none;
+            overflow-y: auto;
+        }
+        span.created {
+            font-size: 90%;
+            font-style: italic;
+            display: block;
+            width: 100%;
+            text-align: right;
+        }
+        span.delete {
+            position: absolute;
+            right: 10px; top: 0;
+            cursor: pointer;
+        }
+        span.pin {
+            font-size: 80%;
+            border-radius: 5px;
+            position: absolute;
+            top: 0; left: 10px;
+            padding: 2px;
+            cursor: pointer;
+            &.pinned {
+                background-color: aqua;
+            }
+        }
+    }
+}
