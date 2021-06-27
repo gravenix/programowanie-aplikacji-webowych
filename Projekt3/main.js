@@ -66,7 +66,7 @@ var WeatherItem = /** @class */ (function () {
             _this.node.appendChild(_this.renderPressure());
             _this.node.appendChild(_this.renderHumidity());
             _this.node.appendChild(_this.renderDeleteCity());
-        })["catch"](function (err) {
+        }).catch(function (err) {
             if (err.status === 404)
                 alert("Nie odnaleziono miasta");
             else
@@ -103,7 +103,7 @@ var Weather = /** @class */ (function () {
         var result = document.getElementById('places');
         var input = document.getElementById('new-place');
         var place = {
-            location: input.value
+            location: input.value,
         };
         var item = new WeatherItem(place, this.onDelete(place));
         this.items.push(item);
